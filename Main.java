@@ -7,11 +7,11 @@ public class Main {
 
     public static void main(String[] args) {
         List<Book> initialBooks = new ArrayList<>();
-        initialBooks.add(new Book("Title1", "Author1", "ISBN1", 2001));
-        initialBooks.add(new Book("Title2", "Author2", "ISBN2", 2002));
-        initialBooks.add(new Book("Title3", "Author3", "ISBN3", 2003));
-        initialBooks.add(new Book("Title4", "Author4", "ISBN4", 2004));
-        initialBooks.add(new Book("Title5", "Author5", "ISBN5", 2005));
+        initialBooks.add(new Book("Pan Tadeusz", "Adam Mickiewicz", "ISBN1", 2001));
+        initialBooks.add(new Book("Inny Swiat", "Gustaw Herling-Grudzinski", "ISBN2", 2002));
+        initialBooks.add(new Book("Tango", "Slawomir Mrozek", "ISBN3", 2003));
+        initialBooks.add(new Book("Lalka", "Boleslaw Prus", "ISBN4", 2004));
+        initialBooks.add(new Book("Iliada", "Homer", "ISBN5", 2005));
 
         bookManager = new BookManager(initialBooks);
         runMenu();
@@ -31,7 +31,7 @@ public class Main {
 
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();  
 
             switch (choice) {
                 case 1:
@@ -66,7 +66,7 @@ public class Main {
         String isbn = scanner.nextLine();
         System.out.print("Enter year: ");
         int year = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
 
         Book newBook = new Book(title, author, isbn, year);
         bookManager.addBook(newBook);
@@ -112,7 +112,7 @@ public class Main {
             String newIsbn = scanner.nextLine();
             System.out.print("Enter new year: ");
             int newYear = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();  
 
             Book newBook = new Book(newTitle, newAuthor, newIsbn, newYear);
             bookManager.updateBook(oldBook, newBook);
