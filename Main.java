@@ -66,7 +66,7 @@ public class Main {
         String isbn = scanner.nextLine();
         System.out.print("Enter year: ");
         int year = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();  
 
         Book newBook = new Book(title, author, isbn, year);
         bookManager.addBook(newBook);
