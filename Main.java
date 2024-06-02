@@ -31,7 +31,7 @@ public class Main {
 
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();  
 
             switch (choice) {
                 case 1:
@@ -112,7 +112,7 @@ public class Main {
             String newIsbn = scanner.nextLine();
             System.out.print("Enter new year: ");
             int newYear = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine(); 
 
             Book newBook = new Book(newTitle, newAuthor, newIsbn, newYear);
             bookManager.updateBook(oldBook, newBook);
